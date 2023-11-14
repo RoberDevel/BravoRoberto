@@ -19,15 +19,15 @@ public class Main {
     public static void main(String[] args) {
         List<String> categorias = List.of("Reunión", "Conferencia", "Taller");
         List<Evento> listaEventos = List.of(
-                new Evento("evento1", LocalDate.of(2022, 11, 10), categorias.get(0)),
-                new Evento("evento2", LocalDate.of(2023, 2, 15), categorias.get(1)),
-                new Evento("evento3", LocalDate.of(2023, 8, 30), categorias.get(2)),
-                new Evento("evento4", LocalDate.of(2023, 6, 11), categorias.get(1)),
-                new Evento("evento5", LocalDate.of(2023, 7, 2), categorias.get(1)),
-                new Evento("evento6", LocalDate.of(2023, 1, 25), categorias.get(2)),
-                new Evento("evento7", LocalDate.of(2023, 2, 20), categorias.get(0)),
-                new Evento("evento8", LocalDate.of(2023, 11, 10), categorias.get(0)),
-                new Evento("evento9", LocalDate.of(2023, 6, 11), categorias.get(2))
+                new Evento("evento1", LocalDate.of(2024, 11, 10), categorias.get(0)),
+                new Evento("evento2", LocalDate.of(2024, 2, 15), categorias.get(1)),
+                new Evento("evento3", LocalDate.of(2024, 8, 30), categorias.get(2)),
+                new Evento("evento4", LocalDate.of(2023, 12, 11), categorias.get(1)),
+                new Evento("evento5", LocalDate.of(2024, 7, 2), categorias.get(1)),
+                new Evento("evento6", LocalDate.of(2024, 1, 25), categorias.get(2)),
+                new Evento("evento7", LocalDate.of(2023, 12, 20), categorias.get(0)),
+                new Evento("evento8", LocalDate.of(2024, 11, 10), categorias.get(0)),
+                new Evento("evento9", LocalDate.of(2024, 6, 11), categorias.get(0))
         );
 
         //Filtra los eventos que están programados para una fecha específica.
@@ -44,7 +44,7 @@ public class Main {
 
         System.out.println("----------------------");
         //Encuentra el evento más próximo en el tiempo utilizando Optionals.
-        Optional<Evento> evento = listaEventos.stream().sorted(Comparator.comparing(Evento::getFecha).reversed()).findFirst();
+        Optional<Evento> evento = listaEventos.stream().sorted(Comparator.comparing(Evento::getFecha)).findFirst();
         evento.ifPresentOrElse(System.out::println, ()-> System.out.println("No hay ningun evento en la lista"));
 
     }
