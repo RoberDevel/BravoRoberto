@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "92c230f4-b90e-40b4-adb8-2479615b286c",
+		"name": "Clase5Ejercicio1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24652492"
+	},
+	"item": [
+		{
+			"name": "obtenerAlumnos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/alumnos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"alumnos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerCalificacionesPorMatricula",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/calificaciones/51",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"calificaciones",
+						"51"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerCalificacionesPorOrdDesc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/calificaciones/ordendesc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"calificaciones",
+						"ordendesc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
